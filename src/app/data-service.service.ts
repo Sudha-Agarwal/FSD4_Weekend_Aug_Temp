@@ -16,4 +16,10 @@ export class DataServiceService {
     return this.httpClient.post(this.url + '/users/' + user.email, user);
 
   }
+
+  createNewUser(user:any){
+
+    return this.httpClient.post(this.url + '/createUser', user);
+
+  }
 }

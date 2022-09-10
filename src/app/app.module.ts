@@ -9,8 +9,9 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { CourseComponent } from './course/course.component';
 import { AddCourseComponent } from './add-course/add-course.component';
 import { LoginFormComponent } from './login-form/login-form.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http';
+import { ModelRegisterationFormComponent } from './model-registeration-form/model-registeration-form.component';
 
 @NgModule({
   declarations: [
@@ -20,13 +21,15 @@ import { HttpClientModule} from '@angular/common/http';
     AboutUsComponent,
     CourseComponent,
     AddCourseComponent,
-    LoginFormComponent
+    LoginFormComponent,
+    ModelRegisterationFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

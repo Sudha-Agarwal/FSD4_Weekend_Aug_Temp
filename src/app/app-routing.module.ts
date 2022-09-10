@@ -5,6 +5,7 @@ import { AddCourseComponent } from './add-course/add-course.component';
 import { CourseComponent } from './course/course.component';
 import { HomeComponent } from './home/home.component';
 import { LoginFormComponent } from './login-form/login-form.component';
+import { ModelRegisterationFormComponent } from './model-registeration-form/model-registeration-form.component';
 
 const routes: Routes = [
   {path:'', redirectTo: 'home',pathMatch: 'full'},
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path: 'courses', component: CourseComponent},
   {path:'add-course', component:AddCourseComponent},
   {path:'login-form', component: LoginFormComponent},
+  {path: 'model-registration-form', component:ModelRegisterationFormComponent},
   {path: '**', component: HomeComponent}
 ];
 
