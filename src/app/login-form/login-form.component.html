@@ -1,0 +1,24 @@
+<div class="container">
+
+    <form #loginForm = "ngForm" (ngSubmit) = "onSubmit()">
+        Email: <input type= "email" class="form-control"
+        [(ngModel)] = "user.email" name="email" required #email="ngModel">
+
+        <div *ngIf = "loginForm.submitted && email.errors" class="text-danger">
+            <p *ngIf = "email.errors && email.errors['required']">Email is required</p>
+            
+        </div>
+        Password: <input type= "password" class="form-control"
+        [(ngModel)] = "user.password" name="password" 
+        required #password="ngModel" minlength="6">
+
+        <div *ngIf = "loginForm.submitted && password.errors" class="text-danger">
+            <p *ngIf = "password.errors && password.errors['required']">Password is required</p>
+            <p *ngIf = "password.errors && password.errors['minlength']">Password should be 6 characters long</p>
+            
+        </div>
+
+        <button type="submit" class="btn btn-primary mt-3" [disabled] = "loginForm.invalid">Submit</button>
+
+    </form>
+</div>
