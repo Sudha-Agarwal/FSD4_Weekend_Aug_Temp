@@ -17,7 +17,10 @@ user = {email:'', password:''};
 
   onSubmit(){
     console.log(this.user);
-    this.ds.checkLogin(this.user).subscribe(response =>console.log(response));
+    this.ds.checkLogin(this.user).subscribe({
+      next: response =>console.log(response),
+      error: err=>console.log("Error: " + err),
+      complete: ()=>console.log("data complete")})
   }
 
 }
