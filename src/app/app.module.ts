@@ -12,6 +12,7 @@ import { LoginFormComponent } from './login-form/login-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http';
 import { ModelRegisterationFormComponent } from './model-registeration-form/model-registeration-form.component';
+import { CourseDetailComponent } from './course-detail/course-detail.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ModelRegisterationFormComponent } from './model-registeration-form/mode
     CourseComponent,
     AddCourseComponent,
     LoginFormComponent,
-    ModelRegisterationFormComponent
+    ModelRegisterationFormComponent,
+    CourseDetailComponent
   ],
   imports: [
     BrowserModule,

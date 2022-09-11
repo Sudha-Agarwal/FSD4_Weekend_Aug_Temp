@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Course } from './course';
 
@@ -25,5 +25,10 @@ export class DataServiceService {
 
   getCourse(): Observable<Course[]>{
     return this.httpClient.get<Course[]>(this.url + '/courses');
+  }
+
+  getCourseDetailsById(id:any):Observable<Course>{
+    const params = new HttpParams().set("id",id);
+    return this.httpClient.get<Course>(this.url + '/Getcourses',{'params': params})
   }
 }

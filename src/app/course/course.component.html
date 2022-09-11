@@ -13,4 +13,24 @@
             </tr>
         </tbody>
     </table>
-</div>
+
+
+    <div class="row  m-4">
+        <div class="col-md-4 col-lg-3 col-sm-6" *ngFor = "let course of courses">
+    <div class="card bg-danger m-2 text-white">
+        <div class="card-header">{{course.author}}</div>
+        <div class="card-body">
+            <img [src]="imgPath" alt="" class="card-img-top" style="width:100%">
+            <div class="card-body text-center">
+                <h4 class="card-title">{{course.name}}</h4>
+                <p>Some card data</p>
+                <p>Some card data</p>
+                <p>Some card data</p>      
+
+              <a routerLink = "/course-detail/{{course.id}}" class="btn btn-secondary">View Info</a>
+            </div>
+        </div>
+        <div class="card-footer">{{course.id}}</div>
+    </div>
+    </div>
+    </div>
