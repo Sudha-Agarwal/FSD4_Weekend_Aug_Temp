@@ -1,0 +1,19 @@
+<div class="container">
+    <table class="table table-striped">
+        <thead>
+            <th>Id</th>
+            <th>Author</th>
+            <th>Name</th>
+        </thead>
+        <tbody>
+            <tr *ngFor = "let mobile of mobiles">
+                <td>{{mobile.sku}}</td>
+                <td>{{mobile.name}}</td>
+                <td>{{mobile.price}}</td>   
+                <td><button (click) = "showDetails(mobile)">Edit</button></td>             
+            </tr>
+        </tbody>
+    </table>
+
+    <app-mobile-details [mobile] = "selectedMobile" (mobileChange) = "updated($event)"></app-mobile-details>
+</div>

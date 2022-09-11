@@ -13,6 +13,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http';
 import { ModelRegisterationFormComponent } from './model-registeration-form/model-registeration-form.component';
 import { CourseDetailComponent } from './course-detail/course-detail.component';
+import { ProductListComponent } from './product-list/product-list.component';
+import { LaptopListComponent } from './product-list/laptop-list/laptop-list.component';
+import { MobileListComponent } from './product-list/mobile-list/mobile-list.component';
+import { MobileDetailsComponent } from './product-list/mobile-details/mobile-details.component';
+
 
 @NgModule({
   declarations: [
@@ -24,7 +29,12 @@ import { CourseDetailComponent } from './course-detail/course-detail.component';
     AddCourseComponent,
     LoginFormComponent,
     ModelRegisterationFormComponent,
-    CourseDetailComponent
+    CourseDetailComponent,
+    ProductListComponent,
+    LaptopListComponent,
+    MobileListComponent,
+    MobileDetailsComponent,
+   
   ],
   imports: [
     BrowserModule,

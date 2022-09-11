@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpParams } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Course } from './course';
 
@@ -10,7 +10,11 @@ export class DataServiceService {
 
   private url = "http://localhost:8080";
 
-  constructor(private httpClient:HttpClient) { }
+  headers:HttpHeaders;
+
+  constructor(private httpClient:HttpClient) { 
+    this.headers  = new HttpHeaders().set('content-type','application/json');
+  }
 
   checkLogin(user:any){
     alert("service method called");
@@ -29,6 +33,6 @@ export class DataServiceService {
 
   getCourseDetailsById(id:any):Observable<Course>{
     const params = new HttpParams().set("id",id);
-    return this.httpClient.get<Course>(this.url + '/Getcourses',{'params': params})
+    return this.httpClient.get<Course>(this.url + '/Getcourses',{'headers': this.headers,'params': params})
   }
 }
