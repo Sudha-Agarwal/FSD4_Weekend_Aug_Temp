@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { Course } from './course';
 
 @Injectable({
   providedIn: 'root'
@@ -18,8 +20,10 @@ export class DataServiceService {
   }
 
   createNewUser(user:any){
-
     return this.httpClient.post(this.url + '/createUser', user);
+  }
 
+  getCourse(): Observable<Course[]>{
+    return this.httpClient.get<Course[]>(this.url + '/courses');
   }
 }
