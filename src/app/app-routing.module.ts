@@ -7,6 +7,7 @@ import { CourseComponent } from './course/course.component';
 import { HomeComponent } from './home/home.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { ModelRegisterationFormComponent } from './model-registeration-form/model-registeration-form.component';
+import { PipesComponent } from './pipes/pipes.component';
 import { LaptopListComponent } from './product-list/laptop-list/laptop-list.component';
 import { MobileListComponent } from './product-list/mobile-list/mobile-list.component';
 import { ProductListComponent } from './product-list/product-list.component';
@@ -20,6 +21,7 @@ const routes: Routes = [
   {path:'login-form', component: LoginFormComponent},
   {path: 'model-registration-form', component:ModelRegisterationFormComponent},
   {path: 'course-detail/:id', component: CourseDetailComponent},
+  {path: 'pipes', component: PipesComponent},
   {path: "products", component:ProductListComponent,
   children: [
     {path:'laptop-list', component: LaptopListComponent},

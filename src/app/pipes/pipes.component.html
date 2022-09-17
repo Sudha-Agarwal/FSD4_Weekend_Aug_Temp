@@ -1,0 +1,35 @@
+<div class="container">
+<p>{{convertText | uppercase}}</p>
+
+<p>The birthday is on {{birthday | date}}</p>
+
+<p>The birthday is on {{birthday | date:"MM/dd/yy"}}</p>
+
+<p>The birthday is on {{birthday | date:format}}</p>
+
+<p>The birthday is on {{birthday | date:format | uppercase}}</p>
+
+
+<div>
+    <h3>Curremcy pipes</h3>
+    <p>{{itemPrice | currency:'INR':true}}</p>
+</div>
+
+<p>{{num | percent}}</p>
+
+
+<div>
+    <label for = "filter">Filter By:</label>
+    <input type = "text" [(ngModel)] = "searchText" placeholder="search users by name">
+</div>
+
+<div *ngIf = "usersList$ | async as usersList">
+<ul>
+    <li *ngFor = "let user of usersList | filter: searchText: 'name'">{{user.name}}</li>
+</ul>
+</div>
+
+
+</div>
+
+

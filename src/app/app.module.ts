@@ -20,6 +20,8 @@ import { MobileDetailsComponent } from './product-list/mobile-details/mobile-det
 import { UserNavbarComponent } from './user-navbar/user-navbar.component';
 import { MyHighlightDirective } from './my-highlight.directive';
 import { BindingsComponent } from './bindings/bindings.component';
+import { PipesComponent } from './pipes/pipes.component';
+import { FilterPipe } from './filter.pipe';
 
 
 @NgModule({
@@ -40,6 +42,8 @@ import { BindingsComponent } from './bindings/bindings.component';
     UserNavbarComponent,
     MyHighlightDirective,
     BindingsComponent,
+    PipesComponent,
+    FilterPipe,
    
   ],
   imports: [

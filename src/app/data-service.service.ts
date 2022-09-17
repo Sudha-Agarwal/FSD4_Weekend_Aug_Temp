@@ -10,6 +10,9 @@ export class DataServiceService {
 
   private url = "http://localhost:8080";
 
+  private json_url = "https://jsonplaceholder.typicode.com/users";
+
+
   headers:HttpHeaders;
 
   constructor(private httpClient:HttpClient) { 
@@ -34,5 +37,9 @@ export class DataServiceService {
   getCourseDetailsById(id:any):Observable<Course>{
     const params = new HttpParams().set("id",id);
     return this.httpClient.get<Course>(this.url + '/Getcourses',{'headers': this.headers,'params': params})
+  }
+
+  getDataForPipe():Observable<any[]>{
+    return this.httpClient.get<any[]>(this.json_url);
   }
 }
