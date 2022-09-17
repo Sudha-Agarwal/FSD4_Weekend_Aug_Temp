@@ -17,6 +17,9 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { LaptopListComponent } from './product-list/laptop-list/laptop-list.component';
 import { MobileListComponent } from './product-list/mobile-list/mobile-list.component';
 import { MobileDetailsComponent } from './product-list/mobile-details/mobile-details.component';
+import { UserNavbarComponent } from './user-navbar/user-navbar.component';
+import { MyHighlightDirective } from './my-highlight.directive';
+import { BindingsComponent } from './bindings/bindings.component';
 
 
 @NgModule({
@@ -34,6 +37,9 @@ import { MobileDetailsComponent } from './product-list/mobile-details/mobile-det
     LaptopListComponent,
     MobileListComponent,
     MobileDetailsComponent,
+    UserNavbarComponent,
+    MyHighlightDirective,
+    BindingsComponent,
    
   ],
   imports: [

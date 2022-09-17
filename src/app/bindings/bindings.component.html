@@ -1,0 +1,18 @@
+<p [class.boldClass]="isBold">Bold class binding</p>
+
+<p [class] = "classesToApply">All classes</p>
+
+<p [ngClass] = "['boldClass','italicsClass']">ng Class Directive1</p>
+
+<p [ngClass] = {boldClass:false,italicsClass:true}>ng Class Directive2</p>
+
+<p [ngClass] = 'AddCSSClasses'>ngClass Directive3</p>
+
+<!--Style Binding-->
+<p [style.color] = "titleStyle">Style Binding1</p>
+
+<p [style.color] = "title_exist ? 'red': 'green'">Style Binding2</p>
+
+<p [ngStyle] = "TitleStyles">ngStyle Directive1</p>
+
+<p [ngStyle] = "{'color':'purple','font-size':'20px'}">ngStyle Directive2</p>
